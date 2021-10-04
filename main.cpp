@@ -26,9 +26,14 @@ main (int argc, char** argv)
 {
   maClasse monInstance (0) ;
 
+  // La ligne 29 doit afficher 0
   cout << "Valeur de l'attribut monEntier: " << monInstance.reqMonEntierRW () << endl ;
+
+  // ATTENTION: on accède ici à une référence sur un attribut!!!
   monInstance.reqMonEntierRW () = 4 ;
-  cout << "On a modifié la valeur de maReference dans main." << endl ;
+
+  // Le résultat de cette modification
+  cout << "On a modifié la valeur d'un attribut dans main." << endl ;
   cout << "La valeur de l'attribut monEntier: " << monInstance.reqMonEntierRW () << endl ;
 
   return 0;
